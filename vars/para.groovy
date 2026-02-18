@@ -1,6 +1,4 @@
 def call(String envName) {
-        stages {
-
             stage('Download Code') {
                 steps {
                     git 'https://github.com/IntelliqDevops/maven.git'
@@ -54,5 +52,3 @@ def call(String envName) {
                 }
             }
         }
-    }
-}
