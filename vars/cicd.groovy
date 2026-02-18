@@ -8,5 +8,10 @@ def buildArtifact()
 } 
 def prepareDockerContext() 
 {
-    sh 'cp webapp/target/*.war docker/webapp.war'
+    sh '''
+        mkdir -p docker
+        cp webapp/target/webapp.war docker/webapp.war
+        cp Dockerfile docker/
+    '''
 }
+
