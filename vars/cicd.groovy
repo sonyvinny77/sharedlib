@@ -18,4 +18,7 @@ EXPOSE 8080
 EOF
     '''
 }
-
+def buildDockerImage(imageName) 
+{
+    sh "docker build -t ${imageName} docker"
+}
