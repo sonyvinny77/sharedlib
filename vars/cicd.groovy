@@ -22,3 +22,10 @@ def buildDockerImage(imageName)
 {
     sh "docker build -t ${imageName} docker"
 }
+def runDockerContainer(containerName, imageName) 
+{
+    sh """
+        docker rm -f ${containerName} || true
+        docker run -d -p 8081:8080 --name ${containerName} ${imageName}
+    """
+}
