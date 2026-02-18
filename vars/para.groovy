@@ -1,8 +1,4 @@
 def call(String envName) {
-
-    pipeline {
-        agent any
-
         stages {
 
             stage('Download Code') {
